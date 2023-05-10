@@ -94,21 +94,12 @@ function App() {
               </Switch>
             </>
           )}
-          {user && role === "customer" && (
-            <>
-              <Switch>
-                <Route path="/profile" component={Profile} />
-                <Route
-                  path="/change-password"
-                  component={ChangePasswordProfile}
-                />
-                <Route path="/my-order" component={MyOrder} />
-                <Route exact path="/checkout" component={Checkout} />
-                <Route exact path="/invoice/:order_id" component={Invoice} />
-                <Route path="/*" component={Error} />
-              </Switch>
-            </>
-          )}
+          <Route path="/profile" component={Profile} />
+          <Route path="/change-password" component={ChangePasswordProfile} />
+          <Route path="/my-order" component={MyOrder} />
+          <Route exact path="/checkout" component={Checkout} />
+          <Route exact path="/invoice/:order_id" component={Invoice} />
+          <Route path="/*" component={Error} />
 
           <Route path="/*" component={Error} />
         </Switch>

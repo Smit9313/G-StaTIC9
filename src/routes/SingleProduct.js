@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../Style/singleproduct.css";
-import { useHistory } from "react-router-dom";
 import { Link, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "../components/navbar/Navbar";
@@ -12,15 +11,12 @@ import {
   ConfigProvider,
   Radio,
   Rate,
-  Badge,
   Breadcrumb,
 } from "antd";
 import { Toaster, toast } from "react-hot-toast";
 import { isEmpty } from "lodash";
-import jwtDecode from "jwt-decode";
 import RelatedProduct from "../components/RelatedProduct";
 import { ShopOutlined } from "@ant-design/icons";
-import ClipLoader from "react-spinners/ClipLoader";
 import "lightbox.js-react/dist/index.css";
 import { SlideshowLightbox } from "lightbox.js-react";
 import AllProduct from "../data/AllProduct";
@@ -28,8 +24,7 @@ import AllProduct from "../data/AllProduct";
 function SingleProduct() {
   const [url, setUrl] = useState("cloths/1.jpg");
   let { product_id } = useParams();
-  const history = useHistory();
-  const token = localStorage.getItem("token");
+
 
   const [data, setData] = useState("");
   const [prod_qty, setProd_qty] = useState(1);
