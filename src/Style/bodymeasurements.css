@@ -1,0 +1,161 @@
+/* body {
+  margin: 0px;
+  padding: 0px;
+  background: #000;
+} */
+
+#vid_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#gui_controls {
+  position: fixed;
+  background-color: #111; /*rgba(255, 0, 0, 0.5);*/
+  z-index: 2;
+  bottom: 0;
+}
+
+#video_overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 10;
+  background-color: #111;
+}
+
+/*  Button style from: 
+    https://googlesamples.github.io/web-fundamentals/fundamentals/media/mobile-web-video-playback.html */
+
+.button_megic {
+  outline: none;
+  position: absolute;
+  color: white;
+  display: block;
+  opacity: 1;
+  background: transparent;
+  border: solid 2px #fff;
+  padding: 0;
+  text-shadow: 0px 0px 4px black;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+#takePhotoButton {
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/clothing-store-2.appspot.com/o/camera-files%2Fic_photo_camera_white_48px.svg?alt=media&token=7990f8fa-c3b0-4e70-8335-da6082cdf860');
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#takePhotoButton:active {
+  background-color: #fff;
+}
+
+#toggleFullScreenButton {
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/clothing-store-2.appspot.com/o/camera-files%2Fic_fullscreen_white_48px.svg?alt=media&token=839d39f6-2a33-4fa0-801f-3e14cc24b4b5');
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#toggleFullScreenButton[aria-pressed='true'] {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/clothing-store-2.appspot.com/o/camera-files%2Fic_fullscreen_exit_white_48px.svg?alt=media&token=db0738b1-091c-44f1-8e9d-4999e1afa5a4');
+}
+
+#switchCameraButton {
+  display: none;
+  width: 64px;
+  height: 64px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/clothing-store-2.appspot.com/o/camera-files%2Fic_fullscreen_exit_white_48px.svg?alt=media&token=db0738b1-091c-44f1-8e9d-4999e1afa5a4');
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#switchCameraButton[aria-pressed='true'] {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/clothing-store-2.appspot.com/o/camera-files%2Fic_camera_front_white_36px.svg?alt=media&token=8296e691-4634-4554-8520-ff35e680cd2e');
+}
+
+@media screen and (orientation: portrait) {
+  /* portrait-specific styles */
+
+  /* video_container (video) doesn't respect height... 
+       so we will fill it in completely in portrait mode
+    */
+  #vid_container {
+    width: 100%;
+    height: 80%;
+  }
+
+  #gui_controls {
+    width: 100%;
+    height: 20%;
+    left: 0;
+  }
+
+  #switchCameraButton {
+    display: block;
+    left: calc(20% - 32px);
+    top: calc(50% - 32px);
+  }
+
+  #toggleFullScreenButton {
+    display: block;
+    left: calc(80% - 32px);
+    top: calc(50% - 32px);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #vid_container {
+    width: 80%;
+    height: 100%;
+  }
+
+  #vid_container.left {
+    left: 20%;
+  }
+
+  /* we default to right */
+  #gui_controls {
+    width: 20%;
+    height: 100%;
+    right: 0;
+  }
+
+  /* for the lefties */
+  #gui_controls.left {
+    left: 0;
+  }
+
+  #switchCameraButton {
+    left: calc(50% - 32px);
+    top: calc(18% - 32px);
+  }
+
+  #toggleFullScreenButton {
+    left: calc(50% - 32px);
+    top: calc(82% - 32px);
+  }
+}

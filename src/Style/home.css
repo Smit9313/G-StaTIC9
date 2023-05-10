@@ -1,0 +1,23 @@
+.extra-space-home{
+    padding-top: 65px; 
+} 
+
+.set-image img{
+    width: 100vw;
+    height: 90vh;
+    cursor: pointer;
+    margin:0;
+}
+
+.slider{
+    z-index: 0;
+    position: relative;
+    padding-top: 65px;
+}
+
+@media screen and (max-width:500px) {
+    .set-image img{
+    height: 25vh;
+    }
+}
+

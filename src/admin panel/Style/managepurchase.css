@@ -1,0 +1,22 @@
+.purchase-data-table{
+    border: 1px solid black;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    width: 230px;
+}
+
+.purchase-data-table thead{
+    background-color: rgba(154, 154, 154, 0.773);
+}
+
+.single-purchase{
+    background-color: rgba(193, 193, 193, 0.317);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.single-purchase p{
+    color:black;
+}

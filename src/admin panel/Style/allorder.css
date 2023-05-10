@@ -1,0 +1,15 @@
+.color-ring{
+    margin-top: 30vh;
+    margin-left: 40vw
+}
+
+.order-data-table{
+    border: 1px solid black;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    width: 490px;
+}
+
+.order-data-table thead{
+    background-color: rgba(154, 154, 154, 0.773);
+}

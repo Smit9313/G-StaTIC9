@@ -1,0 +1,620 @@
+.gamme-te {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.mar-b {
+  margin-bottom: 15px;
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+
+.table-style {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+.th-style {
+  text-align: left;
+    padding: 10px 15px;
+  line-height: 1.55em;
+}
+
+.td-style {
+  border-top: 1px solid #dbdfea;
+    padding: 10px 15px;
+  line-height: 1.55em;
+  text-align: left;
+}
+
+.tm_f16 {
+  font-size: 16px;
+}
+
+.tm_f50 {
+  font-size: 50px;
+}
+
+.tm_semi_bold {
+  font-weight: 600;
+}
+
+.tm_bold {
+  font-weight: 700;
+}
+
+.tm_m0 {
+  margin: 0px;
+}
+
+.tm_mb2 {
+  margin-bottom: 2px;
+}
+
+.tm_mb5 {
+  margin-bottom: 5px;
+}
+
+.tm_mb10 {
+  margin-bottom: 10px;
+}
+
+.tm_mb20 {
+  margin-bottom: 20px;
+}
+
+.tm_pt0 {
+  padding-top: 0;
+}
+
+.tm_radius_0 {
+  border-radius: 0 !important;
+}
+
+.tm_width_1 {
+  width: 8.33333333%;
+}
+
+.tm_width_2 {
+  width: 16.66666667%;
+}
+
+.tm_width_3 {
+  width: 25%;
+}
+
+.tm_width_4 {
+  width: 33.33333333%;
+}
+
+.tm_border_top {
+  border-top: 1px solid #dbdfea;
+}
+
+.tm_border_left {
+  border-left: 1px solid #dbdfea;
+}
+
+.tm_border_right {
+  border-right: 1px solid #dbdfea;
+}
+
+.tm_round_border {
+  border: 1px solid #dbdfea;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.tm_danger_color {
+  color: red;
+}
+
+.tm_primary_color {
+  color: #111;
+}
+
+.tm_ternary_color {
+  color: #b5b5b5;
+}
+
+.tm_gray_bg {
+  background: #f5f6fa;
+}
+
+.tm_invoice_in {
+  position: relative;
+  z-index: 100;
+}
+
+.tm_container {
+  max-width: 880px;
+  padding: 30px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  color: #666;
+  /* font-family: "Inter", sans-serif; */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6em;
+  /* overflow-x: hidden; */
+  background-color: #f5f6fa;
+}
+
+.tm_text_center {
+  text-align: center;
+}
+
+.tm_text_uppercase {
+  text-transform: uppercase;
+}
+
+.tm_text_right {
+  text-align: right;
+}
+
+.tm_align_center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tm_border_top_0 {
+  border-top: 0;
+}
+
+.tm_table_baseline {
+  vertical-align: baseline;
+}
+
+.tm_border_none {
+  border: none !important;
+}
+
+.tm_table_responsive {
+  overflow-x: auto;
+}
+
+.tm_table_responsive > table {
+  min-width: 600px;
+}
+
+hr {
+  background: #dbdfea;
+  height: 1px;
+  border: none;
+  margin: 0;
+}
+
+.tm_invoice {
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.tm_invoice_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tm_invoice_footer table {
+  margin-top: -1px;
+}
+
+.tm_invoice_footer .tm_left_footer {
+  width: 58%;
+  padding: 10px 15px;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
+
+.tm_invoice_footer .tm_right_footer {
+  width: 42%;
+}
+
+.tm_note {
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.tm_invoice.tm_style1 .tm_invoice_right {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  width: 60%;
+}
+
+.tm_invoice.tm_style1 .tm_invoice_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.tm_invoice.tm_style1 .tm_invoice_head .tm_invoice_right div {
+  line-height: 1em;
+}
+
+.tm_invoice.tm_style1 .tm_invoice_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.tm_invoice.tm_style1 .tm_invoice_seperator {
+  min-height: 18px;
+  border-radius: 1.6em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.tm_invoice.tm_style1 .tm_invoice_info_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tm_invoice.tm_style1 .tm_invoice_info_list > *:not(:last-child) {
+  margin-right: 20px;
+}
+
+.tm_invoice.tm_style1 .tm_logo img {
+  max-height: 50px;
+}
+
+.tm_invoice_wrap {
+  position: relative;
+}
+
+.invoice-background{
+  background-color: #f5f6fa;
+}
+
+@media (min-width: 1000px) {
+  .tm_invoice_btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: 20px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    -webkit-box-shadow: -2px 0 24px -2px rgba(43, 55, 72, 0.05);
+    box-shadow: -2px 0 24px -2px rgba(43, 55, 72, 0.05);
+    border: 3px solid #fff;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+  .tm_invoice_btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+  }
+  .tm_invoice_btn svg {
+    width: 24px;
+  }
+  .tm_invoice_btn .tm_btn_icon {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 42px;
+    width: 42px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .tm_invoice_btn .tm_btn_text {
+    position: absolute;
+    left: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 3px 12px;
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: 500;
+    min-height: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .tm_invoice_btn .tm_btn_text:before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    background-color: #111;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: -3px;
+    top: 50%;
+    margin-top: -6px;
+    border-radius: 2px;
+  }
+  .tm_invoice_btn:hover .tm_btn_text {
+    opacity: 1;
+    visibility: visible;
+  }
+  .tm_invoice_btn:not(:last-child) {
+    margin-bottom: 3px;
+  }
+  .tm_invoice_btn.tm_color1 {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+    border-radius: 5px 5px 0 0;
+  }
+  .tm_invoice_btn.tm_color1:hover {
+    background-color: rgba(0, 122, 255, 0.2);
+  }
+  .tm_invoice_btn.tm_color2 {
+    background-color: rgba(52, 199, 89, 0.1);
+    color: #34c759;
+    border-radius: 0 0 5px 5px;
+  }
+  .tm_invoice_btn.tm_color2:hover {
+    background-color: rgba(52, 199, 89, 0.2);
+  }
+}
+
+@media (max-width: 999px) {
+  .tm_invoice_btns {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-top: 20px;
+    -webkit-box-shadow: -2px 0 24px -2px rgba(43, 55, 72, 0.05);
+    box-shadow: -2px 0 24px -2px rgba(43, 55, 72, 0.05);
+    border: 3px solid #fff;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .tm_invoice_btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    border-radius: 5px;
+    padding: 6px 15px;
+  }
+  .tm_invoice_btn svg {
+    width: 24px;
+  }
+  .tm_invoice_btn .tm_btn_icon {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 8px;
+  }
+  .tm_invoice_btn:not(:last-child) {
+    margin-right: 3px;
+  }
+  .tm_invoice_btn.tm_color1 {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+  }
+  .tm_invoice_btn.tm_color1:hover {
+    background-color: rgba(0, 122, 255, 0.2);
+  }
+  .tm_invoice_btn.tm_color2 {
+    background-color: rgba(52, 199, 89, 0.1);
+    color: #34c759;
+  }
+  .tm_invoice_btn.tm_color2:hover {
+    background-color: rgba(52, 199, 89, 0.2);
+  }
+}
+
+@media (max-width: 767px) {
+  .tm_invoice {
+    padding: 30px 20px;
+  }
+  .tm_invoice .tm_right_footer {
+    width: 100%;
+  }
+  .tm_invoice_footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .tm_invoice_footer .tm_left_footer {
+    width: 100%;
+    border-top: 1px solid #dbdfea;
+    margin-top: -1px;
+    padding: 15px 0;
+  }
+  .tm_note.tm_text_center {
+    text-align: left;
+  }
+  .tm_note.tm_text_center p br {
+    display: none;
+  }
+  .tm_border_left_none_md {
+    border-left-width: 0;
+  }
+  .tm_padd_left_15_md {
+    padding-left: 15px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .tm_invoice.tm_style1 .tm_logo {
+    margin-bottom: 10px;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_head .tm_invoice_left,
+  .tm_invoice.tm_style1 .tm_invoice_head .tm_invoice_right {
+    width: 100%;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_head .tm_invoice_right {
+    text-align: left;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_left {
+    max-width: 100%;
+  }
+  .tm_f50 {
+    font-size: 30px;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_seperator {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+    margin-right: 0;
+    min-height: 5px;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_info_list {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .tm_invoice.tm_style1 .tm_invoice_seperator + .tm_invoice_info_list {
+    margin-bottom: 5px;
+  }
+}
+
+/*--------------------------------------------------------------
+  Will apply only print window
+----------------------------------------------------------------*/
+@media print {
+  .tm_gray_bg {
+    background-color: #f5f6fa !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .tm_ternary_color {
+    color: #b5b5b5 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .tm_hide_print {
+    display: none !important;
+  }
+  hr {
+    background: #dbdfea !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .tm_mb2 {
+    margin-bottom: 2px;
+  }
+  .tm_mb5 {
+    margin-bottom: 5px;
+  }
+  .tm_mb10 {
+    margin-bottom: 10px;
+  }
+  .tm_mb20 {
+    margin-bottom: 20px;
+  }
+  .tm_invoice {
+    padding: 10px;
+  }
+  .tm_invoice .tm_right_footer {
+    width: 42%;
+  }
+  .tm_invoice_footer {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -ms-flex-direction: initial;
+    flex-direction: initial;
+  }
+  .tm_invoice_footer .tm_left_footer {
+    width: 58%;
+    padding: 10px 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    border-top: none;
+    margin-top: 0px;
+  }
+  .tm_note.tm_text_center {
+    text-align: center;
+  }
+  .tm_note.tm_text_center p br {
+    display: initial;
+  }
+  .tm_round_border {
+    border-top-width: 2px;
+  }
+  .tm_border_left_none_md {
+    border-left-width: 1px;
+  }
+  .tm_note {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,121 @@
+.add-suplier {
+  margin: 30px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.add-suplier-sub1 {
+  margin-right: 50px;
+  width: 400px;
+  padding: 20px;
+}
+
+.add-suplier-sub2 {
+  margin-right: 50px;
+  width: 450px;
+  padding: 20px;
+}
+
+.product-details {
+  margin-top: 20px;
+  background-color: rgba(208, 208, 208, 0.429);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product-details .box {
+  margin-top: 10px;
+}
+
+.product-details .box-qty {
+  margin-top: 12px;
+}
+
+.add-suplier-sub1 .box p {
+  padding-bottom: 10px;
+}
+
+.add-suplier-sub1 .box .error-color {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.add-suplier-sub1 .box {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.add-suplier-sub1 .box-qty {
+  display: flex;
+  justify-content: space-between;
+}
+
+.suplier-button {
+  margin: 10px;
+  margin-top: 30px;
+  width: 250px;
+}
+
+
+.button-311 {
+  background-color: #09142d;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-311:hover {
+  opacity: 1.2;
+  background-color: rgb(41, 29, 98);
+}
+
+@media screen and (max-width: 500px) {
+  .add-suplier {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+  }
+
+  .add-suplier-sub1 {
+    margin-right: 0;
+    width: auto;
+  }
+
+  .add-suplier-sub1 .box p {
+    padding-bottom: 10px;
+  }
+
+  .add-suplier-sub1 .box {
+    margin: 10px;
+    margin-top: 10px;
+  }
+  .add-suplier-sub2 {
+    margin-right: 20px;
+    width: 395px;
+    padding: 20px;
+  }
+}

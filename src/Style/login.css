@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: ; */
+}
+
+.extra-space-login{
+    height: 100px;
+}
+
+.footer-f{
+    margin-top: 30px;
+}
+
+.footer-f p{
+    margin-bottom: 5px;
+}
+
+#inputText::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.5; /* Firefox */
+  color: rgb(107, 107, 107);
+}
+
+#font-style{
+    font-family: "Montserrat";
+}

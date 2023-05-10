@@ -1,0 +1,47 @@
+.megic-form{
+    display: flex;
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* justify-content: center; */
+}
+
+.megic-form input{
+    width: 150px;
+    left: 0;
+}
+
+.megic-form label{
+    margin-left: 10px;
+}
+
+.megic-form p{
+    margin-right: 20px;
+    width: 140px;
+}
+
+
+@media screen and (max-width:500px) {
+    .megic-form{
+    
+    margin: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* justify-content: center; */
+}
+
+.megic-form input{
+    width: 130px;
+    left: 0;
+}
+
+.megic-form label{
+    margin-left: 5px;
+}
+
+.megic-form p{
+    margin-right: 5px;
+    width: 120px;
+}
+
+}

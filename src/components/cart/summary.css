@@ -1,0 +1,125 @@
+
+
+.promotion,
+.summary,
+.checkout {
+    float: left;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.promotion>label {
+    float: left;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.promotion>input {
+    float: left;
+    width: 20%;
+    font-size: 1rem;
+    padding: 0.5rem 0 0.5rem 0.7rem;
+    border: 2px solid #080808;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: 40px;
+}
+
+/* .promotion:hover>input {
+    border-color: #f1f1f1;
+} */
+
+.promotion>button {
+    float: left;
+    width: 15%;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    border: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* color: rgb(255, 255, 255); */
+    /* background-color: rgb(182, 182, 182); */
+}
+
+.promotion:hover>button {
+    background-color: #151516;
+    color: #fff;
+}
+
+ .promotion>button::after {
+    content: "Apply";
+    font-size: 1rem;
+} 
+
+.summary {
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.summary ul li {
+    padding: 0.5rem 0;
+}
+
+.summary ul li span {
+    display: inline-block;
+    width: 30%;
+}
+
+.summary ul li.total {
+    font-weight: bold;
+    margin-bottom:10px;
+}
+
+.checkout {
+    text-align: right;
+}
+
+.checkout>button {
+    float: right;
+    width: 20%;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.checkout>button:hover{
+    background-color: #151516;
+    color: #fff;
+}
+
+.empty-product {
+    text-align: center;
+}
+
+.empty-product>button {
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    /* border-radius: 5px; */
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 55vh;
+}
+
+.empty-product>button:hover{
+    background-color: #151516;
+    color: #fff;
+}
+
+@media screen and (max-width:800px){
+    .promotion>input {
+        width: 40%;       
+    }
+    .promotion>button {
+        width: 20%;
+    }
+    .checkout>button {
+        float: right;
+        width: 40%;
+    }
+}

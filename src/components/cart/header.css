@@ -1,0 +1,45 @@
+header.containerh {
+    margin-bottom: 2.5rem;
+    margin-top:100px;
+}
+
+.containerh h1{
+    font-size: 30px;
+    color: #3c3c3c;
+    margin-bottom: 15px;
+}
+
+header .breadcrumb {
+    color: #7d7d7d;
+}
+
+header .breadcrumb li {
+    float: left;
+    padding: 0 6px;
+}
+
+header .breadcrumb li:first-child {
+    padding-left: 2px;
+}
+
+header .breadcrumb li:not(:last-child)::after {
+    content: " \276f";
+    padding-left: 8px;
+}
+    
+header .count {
+    float: right;
+    color: #333333;
+}
+
+@media screen and (max-width:450px){
+    header.containerh {
+        display: flex;
+        flex-direction: column;  
+        margin-bottom: 20px;      
+    }
+        header .count {
+            float: left;    
+        }
+}
+
