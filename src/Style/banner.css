@@ -1,0 +1,98 @@
+.section-bn {
+    padding: 40px 80px;
+    width: auto;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* text-align: center; */
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/clothing-store-2.appspot.com/o/site_images%2F36d51804-4ff4-40e8-90de-408af52e6bfb.png?alt=media&token=774e8f46-d99c-4aa5-8870-a15741e18ce2");
+    background-color: rgb(133, 133, 133);
+    min-width: 650px;
+    height: 50vh;
+    background-size: cover;
+    padding: 30px;
+}
+
+#sm-banner h4{
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#sm-banner h2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+#sm-banner span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+#sm-banner .banner-box button{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 11px 15px;
+    color: rgb(0, 0, 0);
+    /* background-color: transparent; */
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    transition: 0.2s;
+}
+
+#sm-banner .banner-box:hover button{
+    border: 3px solid black;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:1300px){
+    #sm-banner .banner-box {
+        min-width: 500px;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    #sm-banner .banner-box {
+        min-width: 450px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #sm-banner .banner-box {
+        min-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #sm-banner .banner-box {
+        min-width: 100%;
+        margin-top: 20px;
+        height: 30vh;
+    }
+    .section-bn {
+        padding: 20px 30px;
+        width: auto;
+    }
+    /* #sm-banner .banner-box{
+        width: 400px;
+    } */
+}

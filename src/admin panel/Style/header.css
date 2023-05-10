@@ -1,0 +1,40 @@
+.header{
+    background-color: rgb(9, 20, 45);
+    /* height: 20vh; */
+    /* position: fixed; */
+}
+
+.name{
+    color: white;
+    padding-top: 12vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-name{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.header-path{
+    font-weight: 200;
+    font-size: 0.91rem;
+}
+
+
+@media screen and (max-width:450px) {
+    .header{
+        background-color: rgb(9, 20, 45);
+        height: 15vh;
+    }
+    .name{
+        color: white;
+        padding-top: 8.5vh;
+        padding-left: 15px;
+    }
+    
+}

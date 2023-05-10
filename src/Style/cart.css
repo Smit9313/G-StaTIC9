@@ -1,0 +1,13 @@
+.main-container{
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+    margin-bottom: 25px;
+}
+
+@media screen and (min-width:600) {
+    .main-container {
+            width: 75%;
+            max-width: 960px;
+        }
+}

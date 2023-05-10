@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+
+
+@font-face {
+font-family: "Futura";
+src: local("Futura"),
+ url("./../public/fonts/futura/futura light bt.ttf") format("truetype");
+font-weight: 500;
+}
+
+@font-face {
+font-family: "FuturaBold";
+src: local("Futura"),
+ url("./../public/fonts/futura/futura medium bt.ttf") format("truetype");
+font-weight: 600;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.App {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    background-color: white;
+    cursor: url('https://firebasestorage.googleapis.com/v0/b/clothing-store-2.appspot.com/o/site_images%2Fcursor.svg?alt=media&token=6dc9fae2-1c33-4454-b1bf-fedc9690761d'), auto;
+}
+
+input:disabled {
+  color: black !important;
+}
+
+.remove-line-link{
+  color: rgb(28, 20, 57);
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #9191917a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  /* border-radius: 5px; */
+}

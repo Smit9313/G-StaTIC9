@@ -1,0 +1,27 @@
+.supplier-report {
+  height: 80vh;
+}
+
+.supplier-report-button{
+    width: 200px;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 480px) {
+  .ant-calendar-range {
+    width: 320px;
+  }
+  .ant-calendar-range-part {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .ant-picker-panels {
+    flex-direction: column;
+  }
+  .supplier-report {
+    height: 80vh;
+  }
+}

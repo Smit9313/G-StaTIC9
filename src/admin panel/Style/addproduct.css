@@ -1,0 +1,33 @@
+.add-icon{
+    cursor: pointer;
+}
+
+.add-qty{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.box-qty i{
+    /* margin-right: 30px; */
+    padding-top: 10px;
+}
+
+.space-b{
+    width: 30px;
+}
+
+.add-qty-btn p{
+    font-size: 11px;
+    margin-top: 11px;
+    margin-left: 10px;
+}
+
+.add-qty-btn{
+    display: flex;
+}
+
+.ds-flex{
+    display: flex;
+    flex-direction: column;
+}
