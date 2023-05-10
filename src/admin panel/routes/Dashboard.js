@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../Style/dashboard.css";
 import DataTable from "react-data-table-component";
 import { ConfigProvider, Badge, Switch } from "antd";
-import axios from "axios";
 import SortIcon from "@mui/icons-material/ArrowDownward";
-import { Col, Row, Statistic, Card } from "antd";
+import { Statistic, Card } from "antd";
 import CountUp from "react-countup";
-import { Toaster, toast } from "react-hot-toast";
-import { isEmpty } from "lodash";
+import { Toaster } from "react-hot-toast";
 import { Divider } from "antd";
-import ClipLoader from "react-spinners/ClipLoader";
-
+import data from "../../data/MessageData";
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 
@@ -26,7 +23,8 @@ const CustomTitle = ({ row }) => (
           overflow: "hidden",
           whiteSpace: "wrap",
           textOverflow: "ellipses",
-        }}>
+        }}
+      >
         {}
         {row.message}
       </div>
@@ -35,81 +33,6 @@ const CustomTitle = ({ row }) => (
 );
 
 function Dashboard() {
-  const [update, setUpdate] = useState(false);
-
-  const [count, setCount] = useState();
-  const [userCount, setUserCount] = useState();
-  const [orderCount, setOrderCount] = useState();
-  const [loading, setLoading] = useState(false);
-
-  const [data, setData] = useState();
-
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const headers = { Authorization: `Bearer ${token}` };
-    try {
-      axios
-        .get(`${process.env.REACT_APP_API_HOST}/admin-user-count/`, { headers })
-        .then((response) => {
-          console.log(response);
-          if(response.data.message === "Success!"){
-            setUserCount(response.data.data.user_count)
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } catch (err) {}
-  }, []);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const headers = { Authorization: `Bearer ${token}` };
-    try {
-      axios
-        .get(`${process.env.REACT_APP_API_HOST}/admin-order-count/`, { headers })
-        .then((response) => {
-          console.log(response);
-          if (response.data.message === "Success!") {
-            setOrderCount(response.data.data.user_count);
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } catch (err) {}
-  }, []);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const headers = { Authorization: `Bearer ${token}` };
-    try {
-      axios
-        .get(`${process.env.REACT_APP_API_HOST}/admin-contact-us/`, { headers })
-        .then((response) => {
-          setLoading(false);
-          console.log(response);
-          // setCatType(response.data.data);
-          setData(response.data.data);
-          setLoading(true);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } catch (err) {}
-
-    try {
-      axios
-        .get(`${process.env.REACT_APP_API_HOST}/admin-count-messages/`, { headers })
-        .then((response) => {
-          setCount(response.data.data["message_count"]);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } catch (err) {}
-  }, [update]);
 
   const customStyles = {
     rows: {
@@ -144,45 +67,12 @@ function Dashboard() {
             colorPrimaryBorderHover: "#000",
           },
         },
-      }}>
+      }}
+    >
       <div>
         {row.status === "unseen" ? (
           <>
-            <Switch
-              checkedChildren="Seen"
-              unCheckedChildren="Unseen"
-              // checked={row.status === "seen"}
-
-              onChange={() => {
-                const token = localStorage.getItem("token");
-                const headers = { Authorization: `Bearer ${token}` };
-                try {
-                  axios
-                    .patch(
-                      `${process.env.REACT_APP_API_HOST}/admin-contact-us/${row._id}/`,
-                      {
-                        status: "seen",
-                      },
-                      { headers }
-                    )
-                    .then(async (response) => {
-                      console.log(response);
-                     
-                      if (response.data.message === "Success!") {
-                        setUpdate(!update);
-                        toast.success("Seen!", {
-                          duration: 3000,
-                        });
-                      }
-                    })
-                    .catch((error) => {
-                      console.log(error);
-                    });
-                } catch (err) {
-                  console.log("dshbhj");
-                }
-              }}
-            />
+            <Switch checkedChildren="Seen" unCheckedChildren="Unseen" />
           </>
         ) : (
           <>
@@ -204,7 +94,6 @@ function Dashboard() {
       cell: (row) => <CustomTitle1 row={row} />,
       sortable: true,
       width: "130px",
-      // right: true,
     },
     {
       name: <h4>Name</h4>,
@@ -255,15 +144,17 @@ function Dashboard() {
                 colorPrimaryHover: "#000",
                 colorErrorText: "#000",
                 colorError: "#000",
-              }}>
+              }}
+            >
               <Badge
-                count={count}
+                count={8}
                 showZero
                 className=""
                 style={{
                   backgroundColor: "white",
                   color: "black",
-                }}>
+                }}
+              >
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png"
                   alt=""
@@ -274,91 +165,79 @@ function Dashboard() {
           </div>
         </div>
 
-        {loading ? (
-          <>
-            <div className="suplier-list">
-              {!isEmpty(orderCount) && (
-                <div className="dashboard-statistic">
-                  <div className="dashboard-statistic-sub1">
-                    <Card bordered={false} className="dashboard-statistic-card">
-                      <Statistic
-                        title="Users"
-                        value={userCount}
-                        precision={2}
-                        valueStyle={{
-                          color: "#3f8600",
-                        }}
-                        formatter={formatter}
-                      />
-                    </Card>
-                    <Divider
-                      type="vertical"
-                      style={{ height: "150px", backgroundColor: "#000" }}
-                    />
-
-                    <Card bordered={false} className="dashboard-statistic-card">
-                      <Statistic
-                        title="Delivered"
-                        value={orderCount.Delivered}
-                        precision={2}
-                        valueStyle={{
-                          color: "#3f8600",
-                        }}
-                        formatter={formatter}
-                      />
-                    </Card>
-                  </div>
-                  <div className="dashboard-statistic-sub1">
-                    <Card bordered={false} className="dashboard-statistic-card">
-                      <Statistic
-                        title="Pending"
-                        value={orderCount.Pending}
-                        precision={2}
-                        valueStyle={{
-                          color: "#fca503",
-                        }}
-                        formatter={formatter}
-                      />
-                    </Card>
-
-                    <Card bordered={false} className="dashboard-statistic-card">
-                      <Statistic
-                        title="Failed"
-                        value={orderCount.Failed}
-                        precision={2}
-                        valueStyle={{
-                          color: "#cf1322",
-                        }}
-                        formatter={formatter}
-                      />
-                    </Card>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <div className="suplier-list">
-              <DataTable
-                columns={columns}
-                data={data}
-                title="Manage Messages"
-                pagination
-                sortable
-                sortIcon={<SortIcon />}
-                customStyles={customStyles}
-                highlightOnHover
-                subHeader
-                subHeaderAlign="left"
+        <div className="suplier-list">
+          <div className="dashboard-statistic">
+            <div className="dashboard-statistic-sub1">
+              <Card bordered={false} className="dashboard-statistic-card">
+                <Statistic
+                  title="Users"
+                  value={78}
+                  precision={2}
+                  valueStyle={{
+                    color: "#3f8600",
+                  }}
+                  formatter={formatter}
+                />
+              </Card>
+              <Divider
+                type="vertical"
+                style={{ height: "150px", backgroundColor: "#000" }}
               />
+
+              <Card bordered={false} className="dashboard-statistic-card">
+                <Statistic
+                  title="Delivered"
+                  value={35}
+                  precision={2}
+                  valueStyle={{
+                    color: "#3f8600",
+                  }}
+                  formatter={formatter}
+                />
+              </Card>
             </div>
-          </>
-        ) : (
-          <>
-            <div className="loader-spin">
-              <ClipLoader color="#000" />
+            <div className="dashboard-statistic-sub1">
+              <Card bordered={false} className="dashboard-statistic-card">
+                <Statistic
+                  title="Pending"
+                  value={7}
+                  precision={2}
+                  valueStyle={{
+                    color: "#fca503",
+                  }}
+                  formatter={formatter}
+                />
+              </Card>
+
+              <Card bordered={false} className="dashboard-statistic-card">
+                <Statistic
+                  title="Failed"
+                  value={10}
+                  precision={2}
+                  valueStyle={{
+                    color: "#cf1322",
+                  }}
+                  formatter={formatter}
+                />
+              </Card>
             </div>
-          </>
-        )}
+          </div>
+        </div>
+
+        <div className="suplier-list">
+          <DataTable
+            columns={columns}
+            data={data}
+            title="Manage Messages"
+            pagination
+            sortable
+            sortIcon={<SortIcon />}
+            customStyles={customStyles}
+            highlightOnHover
+            subHeader
+            subHeaderAlign="left"
+          />
+        </div>
       </div>
       <Toaster
         position="top-center"

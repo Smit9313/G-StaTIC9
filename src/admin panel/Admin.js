@@ -7,7 +7,6 @@ import UpdateProduct from "./routes/Product/UpdateProduct";
 import UpdateCategory from './routes/Category/UpdateCategory';
 import UpdateSupplier from './routes/Supplier/UpdateSupplier';
 import UpdatePurchase from './routes/Purchase/UpdatePurchase';
-import StockReportPdf from './routes/Reports/StockReportPdf';
 
 function Admin() {
 
@@ -16,7 +15,6 @@ function Admin() {
   return (
     <>
       <Sidebar url={url} />
-
       <Switch>
         <Route exact path={path}>
           <Redirect to="admin/dashboard" />

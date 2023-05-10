@@ -39,7 +39,6 @@ function App() {
   return (
     <CookiesProvider>
       <div className="App">
-        {/* <Navbar /> */}
         <Switch>
           <Route exact path="/">
             <Redirect to="/home" />
@@ -64,36 +63,32 @@ function App() {
 
           <Route exact path="/forgotpassword" component={ForgotPassword} />
           <Route exact path="/resetpassword/:key" component={ChangePassword} />
-          {user && role === "admin" && (
-            <>
-              <Switch>
-                <Route
-                  exact
-                  path="/admin/stockReportPdf/:id"
-                  component={StockReportPdf}
-                />
-                <Route
-                  exact
-                  path="/admin/supplierReportPdf/:id"
-                  component={SupplierReportPdf}
-                />
-                <Route
-                  exact
-                  path="/admin/salesReportPdf/:id"
-                  component={SalesReportPdf}
-                />
-                <Route
-                  exact
-                  path="/admin/purchaseReportPdf/:id"
-                  component={PurchaseReportPdf}
-                />
-                <Route path="/admin" component={Admin} />
-                <Route exact path="/checkout" component={Checkout} />
-                <Route path="/profile" component={Profile} />
-                <Route path="/*" component={Error} />
-              </Switch>
-            </>
-          )}
+
+          <Route
+            exact
+            path="/admin/stockReportPdf/:id"
+            component={StockReportPdf}
+          />
+          <Route
+            exact
+            path="/admin/supplierReportPdf/:id"
+            component={SupplierReportPdf}
+          />
+          <Route
+            exact
+            path="/admin/salesReportPdf/:id"
+            component={SalesReportPdf}
+          />
+          <Route
+            exact
+            path="/admin/purchaseReportPdf/:id"
+            component={PurchaseReportPdf}
+          />
+          <Route path="/admin" component={Admin} />
+          <Route exact path="/checkout" component={Checkout} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/*" component={Error} />
+
           <Route path="/profile" component={Profile} />
           <Route path="/change-password" component={ChangePasswordProfile} />
           <Route path="/my-order" component={MyOrder} />

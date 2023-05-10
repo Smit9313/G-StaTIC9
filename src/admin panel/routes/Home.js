@@ -31,7 +31,6 @@ function Home({ path }) {
       {id === "dashboard" && (
         <section className="home">
           <Dashboard />
-          {/* <h1>Admin Dashboard</h1> */}
         </section>
       )}
       {id === "manageSupplier" && (
