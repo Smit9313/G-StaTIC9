@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../Style/singleproduct.css";
+<<<<<<< HEAD
+=======
+import { useHistory } from "react-router-dom";
+>>>>>>> 25cb49b506aed4524c82972a4f8de467b90a6f25
 import { Link, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "../components/navbar/Navbar";
@@ -11,12 +15,23 @@ import {
   ConfigProvider,
   Radio,
   Rate,
+<<<<<<< HEAD
+=======
+  Badge,
+>>>>>>> 25cb49b506aed4524c82972a4f8de467b90a6f25
   Breadcrumb,
 } from "antd";
 import { Toaster, toast } from "react-hot-toast";
 import { isEmpty } from "lodash";
+<<<<<<< HEAD
 import RelatedProduct from "../components/RelatedProduct";
 import { ShopOutlined } from "@ant-design/icons";
+=======
+import jwtDecode from "jwt-decode";
+import RelatedProduct from "../components/RelatedProduct";
+import { ShopOutlined } from "@ant-design/icons";
+import ClipLoader from "react-spinners/ClipLoader";
+>>>>>>> 25cb49b506aed4524c82972a4f8de467b90a6f25
 import "lightbox.js-react/dist/index.css";
 import { SlideshowLightbox } from "lightbox.js-react";
 import AllProduct from "../data/AllProduct";
@@ -24,7 +39,12 @@ import AllProduct from "../data/AllProduct";
 function SingleProduct() {
   const [url, setUrl] = useState("cloths/1.jpg");
   let { product_id } = useParams();
+<<<<<<< HEAD
 
+=======
+  const history = useHistory();
+  const token = localStorage.getItem("token");
+>>>>>>> 25cb49b506aed4524c82972a4f8de467b90a6f25
 
   const [data, setData] = useState("");
   const [prod_qty, setProd_qty] = useState(1);
