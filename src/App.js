@@ -93,9 +93,6 @@ function App() {
                 <Route path="/*" component={Error} />
               </Switch>
             </>
-
-
-
           )}
           <Route path="/profile" component={Profile} />
           <Route path="/change-password" component={ChangePasswordProfile} />
